@@ -30,6 +30,22 @@ const Main = () => {
         },
         {
             name:'hueRotate'
+        },
+        {
+            name:'blur',
+            maxValue:10
+        },
+        {
+            name:'invert',
+            maxValue:100
+        },
+        {
+            name:'opacity',
+            maxValue:100
+        },
+        {
+            name:'drop-shadow',
+            maxValue:50
         }
     ]
     const[property,setProperty]=useState(
@@ -48,6 +64,9 @@ const Main = () => {
         saturate:100,
         contrast:100,
         hueRotate:0,
+        blur:0,
+        invert:0,
+        opacity:100,
         rotate:0,
         vertical:1,
         horizontal:1,
@@ -92,7 +111,7 @@ const Main = () => {
         canvas.height=details.naturalHeight
         const ctx = canvas.getContext('2d')   
 
-        ctx.filter= `brightness(${state.brightness}%) grayscale(${state.grayscale}%)sepia(${state.sepia}%)saturate(${state.saturate}%)contrast(${state.contrast}%)hue-rotate(${state.hueRotate}deg)`
+        ctx.filter= `brightness(${state.brightness}%) grayscale(${state.grayscale}%)sepia(${state.sepia}%)saturate(${state.saturate}%)contrast(${state.contrast}%)hue-rotate(${state.hueRotate}deg) blur(${state.blur}px) invert(${state.invert}%) opacity(${state.opacity}%)`
 
         ctx.translate(canvas.width/2, canvas.height/2)
 
@@ -150,13 +169,6 @@ const Main = () => {
                             </div>
                             <input name={property.name} onChange={inputHandle} value={state[property.name]} max={property.maxValue}  type='range'/>
                         </div>
-                        {/* <div className="rotate"> */}
-                            {/* <label htmlFor="">Rotate</label> */}
-                            {/* <div className="icon">
-                                <div onClick={leftRotate}> <GrRotateLeft/></div>
-                                <div onClick={rightRotate}> <GrRotateRight/></div>
-                            </div> */}
-                        {/* </div> */}
                     </div>
                     <div className="reset">
                         <button onClick={galleryView}>Gallery View</button>
@@ -166,7 +178,7 @@ const Main = () => {
                 <div className="image_section">
                     <div className="image"> 
                      {
-                        state.image ? <img onLoad={(e)=>setDetails(e.currentTarget)} style={{filter:`brightness(${state.brightness}%) grayscale(${state.grayscale}%)sepia(${state.sepia}%)saturate(${state.saturate}%)contrast(${state.contrast}%)hue-rotate(${state.hueRotate}deg)`,transform:`rotate(${state.rotate}deg) scale(${state.vertical},${state.horizontal})`}} src={state.image} alt=""/>:
+                        state.image ? <img onLoad={(e)=>setDetails(e.currentTarget)} style={{filter:`brightness(${state.brightness}%) grayscale(${state.grayscale}%)sepia(${state.sepia}%)saturate(${state.saturate}%)contrast(${state.contrast}%)hue-rotate(${state.hueRotate}deg)blur(${state.blur}px) invert(${state.invert}%) opacity(${state.opacity}%)`,transform:`rotate(${state.rotate}deg) scale(${state.vertical},${state.horizontal})`}} src={state.image} alt=""/>:
                             <label htmlFor="choose">
                                 <IoIosImage/>
                                 <span> Choose Image</span>
