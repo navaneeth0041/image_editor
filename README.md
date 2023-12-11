@@ -12,3 +12,11 @@ First I created a react application using the command ***npx create-react-app <n
 To apply changes made in the code: ***npm run build***
 
 To run the application: ***npm run start***
+
+
+
+
+**Changes to be made**
+*  Now the pictures which is stored in a particular folder with a particular name format wll only be displayed, need to change that.
+*  Gallery view need to be improved.
+*  More image filters and image editing features need to be added. 
