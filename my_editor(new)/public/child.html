@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Gallery</title>
+</head>
+<style>
+    body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.intro {
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+#image-gallery {
+    width: 80%; 
+    margin: 20px auto;
+}
+
+#current-image {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+button {
+    padding:8px;
+    border-radius:3px ;
+    outline:none;
+    border: 1px solid #dad7d7;
+    cursor:pointer;
+    color:black;
+    font-weight: 600;
+    background-color: beige;
+    border-radius: 8px;
+    margin-left:20px ;
+    text-transform: capitalize;
+    margin-top: 18px;
+    align-self: center;
+    
+
+}
+
+</style>
+<body>
+    <div class="intro"> 
+        <h1>Image Gallery</h1> 
+    </div> 
+    <div id="image-gallery">
+        <img id="current-image" src="images/image1.jpg" alt="Image 1">
+    <script src="script.js"></script>
+</body>
+</html>
