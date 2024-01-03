@@ -22,6 +22,6 @@ To run the application: ***npm run start***
 *  More image filters and image editing features need to be added.
 
 
-** Demo Video**
+**Demo Video**
 
 [Editor_Demo.webm](https://github.com/navaneeth0041/image_editor/assets/143107716/5afe27f4-485a-4f79-96fc-abf0f04b04dc)
