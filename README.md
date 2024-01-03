@@ -19,4 +19,9 @@ To run the application: ***npm run start***
 **Changes to be made**
 *  Now the pictures which is stored in a particular folder with a particular name format wll only be displayed, need to change that.
 *  Gallery view need to be improved.
-*  More image filters and image editing features need to be added. 
+*  More image filters and image editing features need to be added.
+
+
+** Demo Video**
+
+[Editor_Demo.webm](https://github.com/navaneeth0041/image_editor/assets/143107716/5afe27f4-485a-4f79-96fc-abf0f04b04dc)
